@@ -16,14 +16,12 @@
       </section>
 
       <section v-else>
-        <div v-if="loading">Loading...</div>
-
-        <div v-else>
-          <p>{{quote}}</p>
-          <p>{{author}}</p>
-          <button @click="newQuote">New Quote</button>
+        <div>
+          <p>{{quote.text}}</p>
+          <p>{{quote.author}}</p>
         </div>
       </section>
+      <button @click="newQuote">New Quote</button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -32,32 +30,35 @@
       var app = new Vue({
         el: "#app",
         data: {
-          quote: "",
-          author: "",
+          quote: {},
           errored: null,
-          loading: true,
           apiData: [],
         },
         computed: {},
         created() {
-          axios
-            .get("https://type.fit/api/quotes")
-            .then((response) => {
-              console.log(response.data[0]);
-              this.quote = response.data[0].text;
-              this.author = response.data[0].author;
-              this.apiData = response.data;
-              console.log(this.apiData.length);
-            })
-            .catch((error) => {
-              console.log(error);
-              this.errored = true;
-            })
-            .finally(() => (this.loading = false));
+          this.fetchApi();
         },
         methods: {
-          newQuote: () => {
+          fetchApi: () => {
+            axios
+              .get("https://type.fit/api/quotes")
+              .then((response) => {
+                let random = Math.floor(Math.random() * 1600);
+                app.quote = response.data[random]; //app has been used instead of this because meaning of this is different. It is best to use normal function declaration instead of arrow function
+                app.apiData = response.data;
+                return app.apiData;
+              })
+              .catch((error) => {
+                console.log(error);
+                this.errored = true;
+              });
+          },
+          newQuote: function () {
             let random = Math.floor(Math.random() * 1600);
+            let listQuotes = this.apiData;
+            this.quote = listQuotes[random];
+            if (this.quote.author === null)
+              this.quote.author = "Unknown Author";
           },
         },
       });
