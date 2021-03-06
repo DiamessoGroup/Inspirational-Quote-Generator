@@ -8,27 +8,36 @@ For this project, you will build a message generator program. Every time a user 
 
 #### Project Objectives:
 
--   Build a message generator program using JavaScript
--   Use Git version control
--   Use command line
--   Develop locally on your computer
+- Build a message generator program using JavaScript
+- Use Git version control
+- Use command line
+- Develop locally on your computer
 
 #### Prerequisites:
 
--   JavaScript
--   Git and GitHub
--   Command line
+- JavaScript
+- Git and GitHub
+- Command line
+
+## Project Planning
+
+- Have an api to get inspirational quotes from
+  - https://type.fit/api/quotes
+- Install vue.js
+- Randomize index of api array
+- Scaffold website design with Bootstrap
+- Set up front end logic with vue.js
 
 ## Table of contents
 
--   [General info](#general-info)
--   [Screenshots](#screenshots)
--   [Technologies](#technologies)
--   [Setup](#setup)
--   [Features](#features)
--   [Status](#status)
--   [Inspiration](#inspiration)
--   [Contact](#contact)
+- [General info](#general-info)
+- [Screenshots](#screenshots)
+- [Technologies](#technologies)
+- [Setup](#setup)
+- [Features](#features)
+- [Status](#status)
+- [Inspiration](#inspiration)
+- [Contact](#contact)
 
 ## General info
 
@@ -40,9 +49,9 @@ Add more general information about project. What the purpose of the project is? 
 
 ## Technologies
 
--   Tech 1 - version 1.0
--   Tech 2 - version 2.0
--   Tech 3 - version 3.0
+- Tech 1 - version 1.0
+- Tech 2 - version 2.0
+- Tech 3 - version 3.0
 
 ## Setup
 
@@ -57,16 +66,16 @@ Show examples of usage:
 
 List of features ready and TODOs for future development
 
--   Awesome feature 1
+- Awesome feature 1
 
--   Awesome feature 2
+- Awesome feature 2
 
--   Awesome feature 3
+- Awesome feature 3
 
 To-do list:
 
--   Wow improvement to be done 1
--   Wow improvement to be done 2
+- Wow improvement to be done 1
+- Wow improvement to be done 2
 
 ## Status
 
