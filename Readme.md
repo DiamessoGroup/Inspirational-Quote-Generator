@@ -24,9 +24,9 @@ For this project, you will build a message generator program. Every time a user 
 - Have an api to get inspirational quotes from
   - https://type.fit/api/quotes
 - Install vue.js
+- Set up front end logic with vue.js
 - Randomize index of api array
 - Scaffold website design with Bootstrap
-- Set up front end logic with vue.js
 
 ## Table of contents
 
