@@ -23,6 +23,7 @@
   </head>
   <body>
     <div id="app">
+      <h1 class="display-3 text-center m-5 p-5">Random Quote Generator</h1>
       <section v-if="errored">
         <p>
           We're sorry, we're not able to retrieve this information at the
@@ -32,9 +33,13 @@
 
       <section v-else>
         <div class="container">
-          <p class="quote">{{quote.text}}</p>
-          <p class="author">{{quote.author}}</p>
-          <button @click="newQuote" class="new-quote">New Quote</button>
+          <p class="quote blockquote">{{quote.text}}</p>
+          <p class="author blockquote-footer text-right text-primary">
+            {{quote.author}}
+          </p>
+          <button @click="newQuote" class="new-quote float-right">
+            New Quote
+          </button>
         </div>
       </section>
     </div>
@@ -72,7 +77,7 @@
             let random = Math.floor(Math.random() * 1600);
             let listQuotes = this.apiData;
             this.quote = listQuotes[random];
-            if (this.quote.author === null)
+            if (this.quote.author === "null")
               this.quote.author = "Unknown Author";
           },
         },
