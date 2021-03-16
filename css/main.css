@@ -2,12 +2,21 @@ body {
   background-color: #ffb300;
 }
 
+.title {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
 .quote {
   font-size: 40px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 
 .author {
   font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
 }
 
 .new-quote {
@@ -21,4 +30,8 @@ body {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+}
+
+.loading {
+  text-align: center;
 }
